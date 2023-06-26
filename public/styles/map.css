@@ -1,0 +1,11 @@
+#map {
+	position: relative;
+	width: 100%;
+	height: 300px;
+}
+
+#clusterMap {
+	position: relative;
+	width: 100%;
+	height: 400px;
+}
