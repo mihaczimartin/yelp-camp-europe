@@ -1,4 +1,7 @@
 {
+	"engines": {
+		"node": "18.15.0"
+	},
 	"name": "yelp-camp-europe",
 	"version": "1.0.0",
 	"description": "A web application built for the Web Developer Bootcamp course on Udemy with React UI.",
