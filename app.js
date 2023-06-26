@@ -144,7 +144,7 @@ const sessionConfig = {
 	cookie: {
 		// According to OWASP, this setting should be explicit for security reasons.
 		httpOnly: true,
-		// secure: true,
+		secure: true,
 		// Expires after one week counting in milliseconds.
 		expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
 		maxAge: 1000 * 60 * 60 * 24 * 7,
