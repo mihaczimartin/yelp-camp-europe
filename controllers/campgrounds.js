@@ -4,8 +4,6 @@ const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
 const mapBoxToken = process.env.MAPBOX_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapBoxToken });
 
-// TODO A fixed sized of all images should be rendered on all read/show pages! Using cloudinary's image transfrom api.
-
 module.exports.readIndex = async (req, res) => {
 	const campgrounds = await Campground.find({});
 	res.render("campgrounds/index", { campgrounds });
@@ -14,12 +12,6 @@ module.exports.readIndex = async (req, res) => {
 module.exports.readNew = (req, res) => {
 	res.render("campgrounds/new");
 };
-
-// TODO only a maximum of 10 images allowed per campground. This should be applied to updateCampground also!
-
-// TODO make sure you can't create a campground without at least ONE image.
-
-// TODO if no data was sent from Geocode, flash a message like "No such place found. Please give a valid location."
 
 module.exports.createCampground = async (req, res) => {
 	const geoData = await geocodingClient
@@ -61,8 +53,6 @@ module.exports.readEditCampground = async (req, res) => {
 	res.render("campgrounds/edit", { campground });
 };
 
-// TODO make sure you can't update campground so that no image is present!
-
 module.exports.updateCampground = async (req, res) => {
 	const { id } = req.params;
 	const campground = await Campground.findByIdAndUpdate(id, {
@@ -85,8 +75,6 @@ module.exports.updateCampground = async (req, res) => {
 	req.flash("success", "Successfully updated campground!");
 	res.redirect(`/campgrounds/${campground._id}`);
 };
-
-// TODO when deleting campground, the images should also be deleted.
 
 module.exports.deleteCampground = async (req, res) => {
 	const { id } = req.params;
