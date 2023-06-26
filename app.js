@@ -69,6 +69,8 @@ app.use(methodOverride("_method"));
 
 // Security middlewares for Mongo injection and HTTP headers.
 
+app.set("trust proxy", 1);
+
 app.use(mongoSanitize());
 
 const scriptSrcUrls = [
