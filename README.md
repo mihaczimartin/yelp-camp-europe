@@ -9,7 +9,7 @@ A node.js, express.js and mongoDB application made for Colt Steele's The Web Dev
   * Find campgrounds on a cluster map.
 
 ## Technologies
-  * Node.js, Express.js, Ejs, Joi, Multer
+  * Node.js, Express.js, Ejs, Joi, Bootstrap
   * Mapbox, Cloudinary, Passport
   * MongoDB, Mongoose
   * dotenv, Sanitize-HTML, Helmet
