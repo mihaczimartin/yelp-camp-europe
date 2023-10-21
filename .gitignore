@@ -1,4 +1,5 @@
 node_modules
+seeds
 _todo
 .env
 package-lock.json
